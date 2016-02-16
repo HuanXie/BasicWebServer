@@ -14,5 +14,4 @@ public interface EmailDTO {
     public int getEmailNo();
     
     public String getEmail();
-    
 }
