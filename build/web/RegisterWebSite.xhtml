@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Welcome to the Email Register</title>
+    </h:head>
+    <h:body>
+        <h1>Welcome to the Email Register</h1>
+
+        <h3>Email Register</h3>
+            <p>
+                <h:outputLabel for="returnemail" rendered="#{RegisterManager.returnemail != null}"  value="Return email is : "/>
+                <h:outputText id="returnemail" value="#{RegisterManager.returnemail}"/>
+                <h:outputText rendered="#{RegisterManager.returnemail == null}"  value="No email is received"/>
+            </p>
+        <hr/>
+
+        <h:form>
+           
+            
+            <h3>Email Register</h3>
+            <p>
+                <h:outputLabel for="email" value="please input your email address"/>
+                <h:inputText id="email" value="#{RegisterManager.email}"/>
+                <h:commandButton value="register" action="#{RegisterManager.register}"/>
+            </p>   
+            <hr/>
+        </h:form>
+    </h:body>
+</html>
+
